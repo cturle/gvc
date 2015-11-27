@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="13.3">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>790</x>
+      <y>310</y>
+      <w>220</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Echéance
+--
+date-début : Date
+date-fin : Date</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>320</x>
+      <y>310</y>
+      <w>140</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>valign=center
+VersionContrat</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>340</y>
+      <w>360</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m2=1
+échéance-en-cours
+</panel_attributes>
+    <additional_attributes>10.0;20.0;340.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>400</y>
+      <w>360</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m2=0..1
+/échéance-suivante(:Echéance)</panel_attributes>
+    <additional_attributes>10.0;20.0;340.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>230</x>
+      <y>90</y>
+      <w>780</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>halign=center
+valign=center
+fontsize=24
+Modèle fonctionnel</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>390</x>
+      <y>510</y>
+      <w>140</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>valign=center
+Risque</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>430</x>
+      <y>640</y>
+      <w>140</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>valign=center
+Garantie</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>870</x>
+      <y>640</y>
+      <w>140</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>valign=center
+Tarif Calculé</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>660</y>
+      <w>330</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m2=0..1
+calcul-tarif()
+</panel_attributes>
+    <additional_attributes>10.0;20.0;310.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>330</x>
+      <y>780</y>
+      <w>570</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>
+calcul-?(G) = calcul-proratisé(échéance-en-cours.date-début, 
+                                               échéance-en-cours.date-fin)</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
