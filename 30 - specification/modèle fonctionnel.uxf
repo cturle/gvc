@@ -1,66 +1,69 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="13.3">
-  <zoom_level>10</zoom_level>
+<diagram program="umlet" version="14.1.1">
+  <zoom_level>8</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>790</x>
-      <y>310</y>
-      <w>220</w>
-      <h>150</h>
+      <x>384</x>
+      <y>432</y>
+      <w>176</w>
+      <h>160</h>
     </coordinates>
-    <panel_attributes>Echéance
+    <panel_attributes>GarantieRisque
 --
-date-début : Date
-date-fin : Date</panel_attributes>
+/subordonnantes
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>320</x>
-      <y>310</y>
-      <w>140</w>
-      <h>150</h>
+      <x>112</x>
+      <y>432</y>
+      <w>112</w>
+      <h>80</h>
     </coordinates>
-    <panel_attributes>valign=center
-VersionContrat</panel_attributes>
+    <panel_attributes>RisqueContrat
+valign=center</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>450</x>
-      <y>340</y>
-      <w>360</w>
-      <h>50</h>
+      <x>216</x>
+      <y>456</y>
+      <w>184</w>
+      <h>40</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;
-m2=1
-échéance-en-cours
+    <panel_attributes>lt=-
+r1=/risque
+m1=1
+r2=/garanties
+m2=1..*
 </panel_attributes>
-    <additional_attributes>10.0;20.0;340.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;210.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>450</x>
-      <y>400</y>
-      <w>360</w>
-      <h>50</h>
+      <x>552</x>
+      <y>536</y>
+      <w>192</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-m2=0..1
-/échéance-suivante(:Echéance)</panel_attributes>
-    <additional_attributes>10.0;20.0;340.0;20.0</additional_attributes>
+r2=type
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;220.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>230</x>
-      <y>90</y>
-      <w>780</w>
-      <h>70</h>
+      <x>120</x>
+      <y>136</y>
+      <w>624</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>halign=center
 valign=center
@@ -71,64 +74,142 @@ Modèle fonctionnel</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>390</x>
-      <y>510</y>
-      <w>140</w>
-      <h>80</h>
+      <x>728</x>
+      <y>528</y>
+      <w>112</w>
+      <h>64</h>
     </coordinates>
-    <panel_attributes>valign=center
-Risque</panel_attributes>
+    <panel_attributes>CP:Garantie
+--
+/est-subordonnee
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>430</x>
-      <y>640</y>
-      <w>140</w>
+      <x>112</x>
+      <y>288</y>
+      <w>448</w>
       <h>80</h>
     </coordinates>
-    <panel_attributes>valign=center
-Garantie</panel_attributes>
+    <panel_attributes>Entité
+--
+date-début : Date
+date-fin      : Date
+est-annulee : Boolean
+presence     : Set(Time)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>870</x>
-      <y>640</y>
-      <w>140</w>
-      <h>80</h>
+      <x>728</x>
+      <y>432</y>
+      <w>160</w>
+      <h>64</h>
     </coordinates>
-    <panel_attributes>valign=center
-Tarif Calculé</panel_attributes>
+    <panel_attributes>GarantieRisqueEtat
+--
+valeur-assiette : Number
+montant           : Number</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>728</x>
+      <y>288</y>
+      <w>248</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>EntiteEtat
+--
+instant : Time
+status  : {ABSENTE, ANNULEE, ACTIVE}
+/est-presente
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>560</x>
-      <y>660</y>
-      <w>330</w>
-      <h>50</h>
+      <x>464</x>
+      <y>360</y>
+      <w>24</w>
+      <h>88</h>
     </coordinates>
-    <panel_attributes>lt=-&gt;
-m2=0..1
-calcul-tarif()
-</panel_attributes>
-    <additional_attributes>10.0;20.0;310.0;20.0</additional_attributes>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
   </element>
   <element>
-    <id>UMLNote</id>
+    <id>Relation</id>
     <coordinates>
-      <x>330</x>
-      <y>780</y>
-      <w>570</w>
-      <h>290</h>
+      <x>552</x>
+      <y>448</y>
+      <w>192</w>
+      <h>40</h>
     </coordinates>
-    <panel_attributes>
-calcul-?(G) = calcul-proratisé(échéance-en-cours.date-début, 
-                                               échéance-en-cours.date-fin)</panel_attributes>
-    <additional_attributes/>
+    <panel_attributes>lt=-
+r1=garantie
+m1=1
+r2=etats
+m2=1..*
+</panel_attributes>
+    <additional_attributes>10.0;20.0;220.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>552</x>
+      <y>296</y>
+      <w>192</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1=entite
+m1=1
+r2=etats
+m2=1..*
+</panel_attributes>
+    <additional_attributes>10.0;20.0;220.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>160</x>
+      <y>360</y>
+      <w>24</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>832</x>
+      <y>528</y>
+      <w>152</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1=CP:subordonnantes
+m1=*
+r2=CP:subordonnees
+m2=*
+</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0;170.0;50.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>784</x>
+      <y>352</y>
+      <w>24</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
   </element>
 </diagram>
