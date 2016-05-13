@@ -1,83 +1,351 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<diagram program="umlet" version="14.1.1">
-  <zoom_level>8</zoom_level>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>384</x>
-      <y>432</y>
-      <w>176</w>
-      <h>160</h>
-    </coordinates>
-    <panel_attributes>GarantieRisque
---
-/subordonnantes
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>112</x>
-      <y>432</y>
-      <w>112</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>RisqueContrat
-valign=center</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>216</x>
-      <y>456</y>
-      <w>184</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=-
-r1=/risque
-m1=1
-r2=/garanties
-m2=1..*
-</panel_attributes>
-    <additional_attributes>10.0;20.0;210.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>552</x>
-      <y>536</y>
-      <w>192</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-r2=type
-m2=1
-</panel_attributes>
-    <additional_attributes>10.0;20.0;220.0;20.0</additional_attributes>
-  </element>
+<diagram program="umlet" version="14.1">
+  <zoom_level>7</zoom_level>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>120</x>
-      <y>136</y>
-      <w>624</w>
-      <h>56</h>
+      <x>0</x>
+      <y>98</y>
+      <w>1309</w>
+      <h>49</h>
     </coordinates>
     <panel_attributes>halign=center
 valign=center
 fontsize=24
-Modèle fonctionnel</panel_attributes>
+GVC30_DC - Modèle Gestion et Vie du Contrat v1.2</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>728</x>
-      <y>528</y>
+      <x>0</x>
+      <y>462</y>
       <w>112</w>
-      <h>64</h>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>Contrat
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>224</x>
+      <y>616</y>
+      <w>105</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>/SStd/PropositionCA/</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>616</y>
+      <w>112</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;set-of&gt;&gt;
+/ContratCA/
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>49</x>
+      <y>567</y>
+      <w>21</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+fg=red</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>105</x>
+      <y>616</y>
+      <w>133</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+r2=proposition
+m2=1
+fg=red</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>217</y>
+      <w>966</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>/Entite/
+--
+date-debut   : Date
+date-fin        : Date*
+est-annulee : Boolean
+/presence    : Set(Time)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>224</x>
+      <y>336</y>
+      <w>623</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;set-of&gt;&gt;
+/EntiteFille/
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>322</x>
+      <y>287</y>
+      <w>21</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+fg=red</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>840</x>
+      <y>287</y>
+      <w>112</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r1=mere
+m1=1
+r2= filles
+m2= *
+fg=red</panel_attributes>
+    <additional_attributes>110.0;10.0;110.0;90.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>665</x>
+      <y>413</y>
+      <w>182</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>/Disposition/
+--
+/debut-application = date-debut
+/fin-application = date-fin</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>490</y>
+      <w>105</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>DPGarantie
+--
+/garantie = mere</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>742</x>
+      <y>455</y>
+      <w>21</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>455</x>
+      <y>476</y>
+      <w>119</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>GarantieRisque
+--
+/date-effet = date-debut
+/risque=mere
+/subordonnantes</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>567</x>
+      <y>490</y>
+      <w>147</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1=mere
+m1=1
+r2=DPs
+m2=*</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>224</x>
+      <y>469</y>
+      <w>105</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>RisqueContrat
+--
+/contrat = mere</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>322</x>
+      <y>483</y>
+      <w>147</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1=mere
+m1=1
+r2=garanties
+m2=1..*
+</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>105</x>
+      <y>476</y>
+      <w>133</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1=mere
+m1=1
+r2=risques
+m2=1..*</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>742</x>
+      <y>371</y>
+      <w>21</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>504</x>
+      <y>371</y>
+      <w>21</w>
+      <h>119</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>273</x>
+      <y>371</y>
+      <w>21</w>
+      <h>112</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>49</x>
+      <y>287</y>
+      <w>21</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;250.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>224</x>
+      <y>532</y>
+      <w>105</w>
+      <h>28</h>
+    </coordinates>
+    <panel_attributes>SStd/Proposition</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>105</x>
+      <y>532</y>
+      <w>133</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r2=proposition
+m2=1</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>266</x>
+      <y>553</y>
+      <w>21</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>567</x>
+      <y>581</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r2=type
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>644</x>
+      <y>574</y>
+      <w>98</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>CP:Garantie
 --
@@ -86,112 +354,28 @@ Modèle fonctionnel</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>112</x>
-      <y>288</y>
-      <w>448</w>
-      <h>80</h>
-    </coordinates>
-    <panel_attributes>Entité
---
-date-début : Date
-date-fin      : Date
-est-annulee : Boolean
-presence     : Set(Time)</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>728</x>
-      <y>432</y>
-      <w>160</w>
-      <h>64</h>
-    </coordinates>
-    <panel_attributes>GarantieRisqueEtat
---
-valeur-assiette : Number
-montant           : Number</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>728</x>
-      <y>288</y>
-      <w>248</w>
-      <h>72</h>
-    </coordinates>
-    <panel_attributes>EntiteEtat
---
-instant : Time
-status  : {ABSENTE, ANNULEE, ACTIVE}
-/est-presente
-</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
     <id>Relation</id>
     <coordinates>
-      <x>464</x>
-      <y>360</y>
-      <w>24</w>
-      <h>88</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>552</x>
-      <y>448</y>
-      <w>192</w>
-      <h>40</h>
-    </coordinates>
-    <panel_attributes>lt=-
-r1=garantie
-m1=1
-r2=etats
-m2=1..*
-</panel_attributes>
-    <additional_attributes>10.0;20.0;220.0;20.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>552</x>
-      <y>296</y>
-      <w>192</w>
-      <h>40</h>
+      <x>567</x>
+      <y>539</y>
+      <w>546</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=-
 r1=entite
 m1=1
-r2=etats
+r2={suite} etats
 m2=1..*
 </panel_attributes>
-    <additional_attributes>10.0;20.0;220.0;20.0</additional_attributes>
+    <additional_attributes>10.0;20.0;760.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>160</x>
-      <y>360</y>
-      <w>24</w>
-      <h>88</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>832</x>
-      <y>528</y>
-      <w>152</w>
-      <h>64</h>
+      <x>735</x>
+      <y>574</y>
+      <w>140</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>lt=-
 r1=CP:subordonnantes
@@ -199,17 +383,64 @@ m1=*
 r2=CP:subordonnees
 m2=*
 </panel_attributes>
-    <additional_attributes>10.0;20.0;170.0;20.0;170.0;50.0;10.0;50.0</additional_attributes>
+    <additional_attributes>10.0;20.0;180.0;20.0;180.0;50.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1092</x>
+      <y>217</y>
+      <w>217</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>EntiteEtat
+--
+instant  : Time
+/status  : {ABSENTE, ANNULEE, ACTIVE}
+/est-presente
+</panel_attributes>
+    <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>784</x>
-      <y>352</y>
-      <w>24</w>
-      <h>96</h>
+      <x>959</x>
+      <y>245</y>
+      <w>147</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1=entite
+m1=1
+r2={suite} etats
+m2=1..*
+</panel_attributes>
+    <additional_attributes>10.0;20.0;190.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1099</x>
+      <y>518</y>
+      <w>140</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>GarantieRisqueEtat
+--
+valeur-assiette : Number
+montant           : Number
+/garantie = entite</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1155</x>
+      <y>287</y>
+      <w>21</w>
+      <h>245</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;330.0</additional_attributes>
   </element>
 </diagram>

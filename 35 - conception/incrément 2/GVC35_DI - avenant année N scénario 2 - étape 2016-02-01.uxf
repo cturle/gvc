@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>310</x>
+      <y>90</y>
+      <w>950</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>halign=center
+valign=center
+fontsize=24
+GVC35_DI - avenant année N scénario 2 - étape 2016-02-01 - v0.2</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>310</x>
+      <y>250</y>
+      <w>120</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>_C1:Contrat_
+bg=#99ff99</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1030</x>
+      <y>390</y>
+      <w>210</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>_V2R1:VersionRisque_
+--
+status = MAJ
+date-resiliation = 01/09/2016
+/date-fin = 01/09/2016
+bg=#99ff99</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>870</x>
+      <y>370</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r1=risques
+m1=*</panel_attributes>
+    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>330</y>
+      <w>250</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m2=contrat à jour
+</panel_attributes>
+    <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>650</x>
+      <y>260</y>
+      <w>230</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_EC1:EtablissementContrat_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>250</y>
+      <w>250</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m2=établissement
+</panel_attributes>
+    <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>420</x>
+      <y>290</y>
+      <w>250</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m2=contrat initial
+</panel_attributes>
+    <additional_attributes>10.0;20.0;230.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>650</x>
+      <y>340</y>
+      <w>230</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>_V2C1:VersionContrat_
+--
+date-terme = 31/12/2016
+bg=#99ff99
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>1010</x>
+      <y>370</y>
+      <w>250</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>650</x>
+      <y>300</y>
+      <w>230</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>_V1C1:VersionContrat_</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>970</x>
+      <y>180</y>
+      <w>290</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>*Modification de niveau Risque :*
+- résiliation de R1 
+-- R1.date-fin de 31/12/2016 à 01/09/2016</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
