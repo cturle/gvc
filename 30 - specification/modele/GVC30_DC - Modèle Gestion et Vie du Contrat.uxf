@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>7</zoom_level>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>84</x>
+      <y>98</y>
+      <w>1358</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>halign=center
+valign=center
+fontsize=24
+GVC30_DC - Modèle Gestion et Vie du Contrat v1.4</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>42</x>
+      <y>462</y>
+      <w>182</w>
+      <h>448</h>
+    </coordinates>
+    <panel_attributes>Contrat
+--
+mode-emission-avenant
+ : {AVANT_ECHEANCE,
+    APRES_ECHEANCE }
+periodicite-avenant
+ : {ANNUEL, SEMESTRIEL,
+    TRIMESTRIEL, MENSUEL,
+    CHAQUE_MOUVEMENT }
+date-terme       : Date*    
+/est-contratCA
+&lt;&lt;temporelle&gt;&gt; taux-commission-courtier
+&lt;&lt;temporelle&gt;&gt; /taux-commission
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>84</x>
+      <y>224</y>
+      <w>987</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>/Entite/
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>336</x>
+      <y>329</y>
+      <w>623</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;set-of&gt;&gt;
+/EntiteFille/
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>616</x>
+      <y>294</y>
+      <w>21</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+fg=red</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>952</x>
+      <y>294</y>
+      <w>112</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+r1=mere
+m1=1
+r2= filles
+m2= *
+fg=red</panel_attributes>
+    <additional_attributes>110.0;10.0;110.0;80.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>833</x>
+      <y>413</y>
+      <w>182</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>/Disposition/
+--
+/debut-application = date-debut
+/fin-application = date-fin-effet</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>868</x>
+      <y>490</y>
+      <w>105</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>DPGarantie
+--
+/garantie = mere</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>455</y>
+      <w>21</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>616</x>
+      <y>476</y>
+      <w>140</w>
+      <h>147</h>
+    </coordinates>
+    <panel_attributes>Garantie
+--
+est-optionnelle
+/date-effet = date-debut
+/risque=mere
+/subordonnantes
+/interdites
+/est-retirable
+/est-subordonnee
+/est-exclusive
+/est-interdite = est-exclusive
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>749</x>
+      <y>490</y>
+      <w>133</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1=mere
+m1=1
+r2=DPs
+m2=*</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>336</x>
+      <y>469</y>
+      <w>147</w>
+      <h>301</h>
+    </coordinates>
+    <panel_attributes>Risque
+--
+est-temporaire
+/contrat = mere</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>476</x>
+      <y>483</y>
+      <w>154</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1=mere
+m1=1
+r2=garanties
+m2=1..*
+</panel_attributes>
+    <additional_attributes>10.0;20.0;200.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>217</x>
+      <y>476</y>
+      <w>133</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1=mere
+m1=1
+r2=risques
+m2=1..*</panel_attributes>
+    <additional_attributes>10.0;20.0;170.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>910</x>
+      <y>392</y>
+      <w>21</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>392</y>
+      <w>21</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>385</x>
+      <y>392</y>
+      <w>21</w>
+      <h>91</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>161</x>
+      <y>294</y>
+      <w>21</w>
+      <h>182</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;240.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>511</x>
+      <y>777</y>
+      <w>105</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>SSTD:Proposition
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>217</x>
+      <y>791</y>
+      <w>308</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r2=proposition
+m2=1</panel_attributes>
+    <additional_attributes>10.0;20.0;420.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>749</x>
+      <y>581</y>
+      <w>98</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r2=type
+m2=1
+</panel_attributes>
+    <additional_attributes>10.0;20.0;120.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>833</x>
+      <y>574</y>
+      <w>98</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>CP:Garantie
+--
+/est-subordonnante
+/est-subordonnee
+/est-exclusive
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>749</x>
+      <y>539</y>
+      <w>490</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1=entite
+m1=1
+r2={suite} etats
+m2=1..*
+</panel_attributes>
+    <additional_attributes>10.0;20.0;680.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>924</x>
+      <y>574</y>
+      <w>140</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1=CP:subordonnantes
+m1=*
+r2=CP:subordonnees
+m2=*
+</panel_attributes>
+    <additional_attributes>10.0;20.0;180.0;20.0;180.0;50.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1218</x>
+      <y>224</y>
+      <w>217</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>EntiteEtat
+--
+instant  : Time
+/status  : {ABSENTE, ANNULEE, ACTIVE}
+/est-presente
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1064</x>
+      <y>238</y>
+      <w>168</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1=entite
+m1=1
+r2={suite} etats
+m2=1..*
+</panel_attributes>
+    <additional_attributes>10.0;20.0;220.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1225</x>
+      <y>518</y>
+      <w>140</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>GarantieEtat
+--
+valeur-assiette : Number
+montant           : Number
+/garantie = entite</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1281</x>
+      <y>287</y>
+      <w>21</w>
+      <h>245</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;330.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>238</x>
+      <y>238</y>
+      <w>168</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>existe-modifications-en-cours
+/est-mis-a-jour-able
+/presence          : Set(Time)
+/est-resiliée
+/est-echue
+lw=0
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>98</x>
+      <y>238</y>
+      <w>140</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>date-debut       : Date
+date-resiliation : Date*
+/date-fin           : Date*
+/date-fin-ihm    : Date*
+lw=0
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>406</x>
+      <y>238</y>
+      <w>140</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>/est-dans-le-SI
+/est-deja-etablie
+/est-deja-maj
+lw=0
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>924</x>
+      <y>616</y>
+      <w>140</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1=CP:interdites
+m1=*
+r2=CP:interdites
+m2=*
+</panel_attributes>
+    <additional_attributes>10.0;20.0;180.0;20.0;180.0;50.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>350</x>
+      <y>357</y>
+      <w>140</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>est-annulee
+/est-supprimable
+/est-annulable
+lw=0
+halign=left</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>623</x>
+      <y>651</y>
+      <w>154</w>
+      <h>63</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;set-of&gt;&gt;
+GarantieTemporaire
+risque.est-temporaire = true
+--
+/bareme-temporaire</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>616</y>
+      <w>21</w>
+      <h>49</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+fg=red</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>294</x>
+      <y>826</y>
+      <w>112</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>GDP:Agence
+--
+/est-agenceCA</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>294</x>
+      <y>875</y>
+      <w>112</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>GDP:Vendeur
+--
+/est-vendeurCA</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>217</x>
+      <y>819</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r2=agence
+m2=1</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>217</x>
+      <y>868</y>
+      <w>91</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r2=vendeur
+m2=1</panel_attributes>
+    <additional_attributes>10.0;20.0;110.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>399</x>
+      <y>819</y>
+      <w>126</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1=SSTD:agence
+m1=1</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>399</x>
+      <y>868</y>
+      <w>126</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1=SSTD:vendeur
+m1=1</panel_attributes>
+    <additional_attributes>10.0;20.0;160.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1288</x>
+      <y>672</y>
+      <w>140</w>
+      <h>98</h>
+    </coordinates>
+    <panel_attributes>RisqueEtat
+--
+/risque = entite
+/base-annuelle-HT
+/base-annuelle-TTC</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>476</x>
+      <y>721</y>
+      <w>826</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+r1=entite
+m1=1
+r2={suite} etats
+m2=1..*
+</panel_attributes>
+    <additional_attributes>10.0;20.0;1160.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1386</x>
+      <y>287</y>
+      <w>21</w>
+      <h>399</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;550.0</additional_attributes>
+  </element>
+</diagram>
