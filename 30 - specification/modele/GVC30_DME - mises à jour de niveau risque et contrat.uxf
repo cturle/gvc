@@ -4,8 +4,8 @@
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>504</x>
-      <y>261</y>
+      <x>639</x>
+      <y>270</y>
       <w>441</w>
       <h>36</h>
     </coordinates>
@@ -16,8 +16,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>711</x>
-      <y>162</y>
+      <x>846</x>
+      <y>171</y>
       <w>18</w>
       <h>18</h>
     </coordinates>
@@ -27,8 +27,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>711</x>
-      <y>171</y>
+      <x>846</x>
+      <y>180</y>
       <w>99</w>
       <h>108</h>
     </coordinates>
@@ -42,8 +42,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>504</x>
-      <y>432</y>
+      <x>639</x>
+      <y>441</y>
       <w>189</w>
       <h>36</h>
     </coordinates>
@@ -54,8 +54,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>792</x>
-      <y>432</y>
+      <x>927</x>
+      <y>441</y>
       <w>99</w>
       <h>36</h>
     </coordinates>
@@ -66,8 +66,8 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>585</x>
-      <y>288</y>
+      <x>720</x>
+      <y>297</y>
       <w>27</w>
       <h>72</h>
     </coordinates>
@@ -77,37 +77,37 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>531</x>
-      <y>288</y>
-      <w>54</w>
+      <x>666</x>
+      <y>297</y>
+      <w>63</w>
       <h>162</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 
 
 
-Maj R</panel_attributes>
+MAJ R</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>9</x>
-      <y>54</y>
+      <x>144</x>
+      <y>63</y>
       <w>1026</w>
       <h>63</h>
     </coordinates>
     <panel_attributes>halign=center
 valign=center
 fontsize=24
-GVC30_DME - mises à jour de niveau risque et contrat - v0.3</panel_attributes>
+GVC30_DME - mises à jour de niveau risque et contrat - v0.4</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>9</x>
-      <y>234</y>
+      <x>144</x>
+      <y>243</y>
       <w>441</w>
       <h>315</h>
     </coordinates>
@@ -137,8 +137,8 @@ modifications prises en compte depuis le dernier avenant :
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>504</x>
-      <y>603</y>
+      <x>639</x>
+      <y>612</y>
       <w>387</w>
       <h>36</h>
     </coordinates>
@@ -149,23 +149,23 @@ bg=yellow</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>810</x>
-      <y>288</y>
-      <w>54</w>
+      <x>945</x>
+      <y>297</y>
+      <w>63</w>
       <h>162</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 
 
 
-Maj C</panel_attributes>
+MAJ C</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>855</x>
-      <y>288</y>
+      <x>990</x>
+      <y>297</y>
       <w>72</w>
       <h>162</h>
     </coordinates>
@@ -176,20 +176,8 @@ Maj C</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>855</x>
-      <y>441</y>
-      <w>108</w>
-      <h>72</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-Maj C</panel_attributes>
-    <additional_attributes>10.0;30.0;10.0;60.0;100.0;60.0;100.0;10.0;40.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>531</x>
-      <y>459</y>
+      <x>666</x>
+      <y>468</y>
       <w>54</w>
       <h>162</h>
     </coordinates>
@@ -205,8 +193,8 @@ Maj C</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>585</x>
-      <y>459</y>
+      <x>720</x>
+      <y>468</y>
       <w>72</w>
       <h>162</h>
     </coordinates>
@@ -217,20 +205,20 @@ Maj C</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>630</x>
-      <y>441</y>
+      <x>765</x>
+      <y>450</y>
       <w>108</w>
       <h>72</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-Maj R</panel_attributes>
+MAJ R</panel_attributes>
     <additional_attributes>10.0;30.0;10.0;60.0;100.0;60.0;100.0;10.0;70.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>846</x>
-      <y>612</y>
+      <x>981</x>
+      <y>621</y>
       <w>108</w>
       <h>72</h>
     </coordinates>
@@ -241,8 +229,8 @@ Maj C</panel_attributes>
   <element>
     <id>UMLSpecialState</id>
     <coordinates>
-      <x>576</x>
-      <y>342</y>
+      <x>711</x>
+      <y>351</y>
       <w>36</w>
       <h>36</h>
     </coordinates>
@@ -252,8 +240,8 @@ Maj C</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>585</x>
-      <y>369</y>
+      <x>720</x>
+      <y>378</y>
       <w>72</w>
       <h>81</h>
     </coordinates>
@@ -264,8 +252,8 @@ Maj C</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>603</x>
-      <y>342</y>
+      <x>738</x>
+      <y>351</y>
       <w>63</w>
       <h>108</h>
     </coordinates>
@@ -276,8 +264,8 @@ Maj C</panel_attributes>
   <element>
     <id>UMLState</id>
     <coordinates>
-      <x>477</x>
-      <y>234</y>
+      <x>612</x>
+      <y>243</y>
       <w>495</w>
       <h>450</h>
     </coordinates>
@@ -287,8 +275,8 @@ Maj C</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>963</x>
-      <y>306</y>
+      <x>1098</x>
+      <y>315</y>
       <w>108</w>
       <h>72</h>
     </coordinates>
@@ -299,8 +287,8 @@ maj R</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>963</x>
-      <y>369</y>
+      <x>1098</x>
+      <y>378</y>
       <w>108</w>
       <h>72</h>
     </coordinates>
@@ -309,25 +297,10 @@ maj C</panel_attributes>
     <additional_attributes>10.0;60.0;70.0;60.0;70.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>810</x>
-      <y>459</y>
-      <w>54</w>
-      <h>162</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-
-
-
-Maj R</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
-  </element>
-  <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>126</x>
-      <y>621</y>
+      <x>261</x>
+      <y>630</y>
       <w>315</w>
       <h>36</h>
     </coordinates>
@@ -338,8 +311,8 @@ fg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>432</x>
-      <y>612</y>
+      <x>567</x>
+      <y>621</y>
       <w>81</w>
       <h>45</h>
     </coordinates>
@@ -349,13 +322,13 @@ fg=red</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>747</x>
-      <y>630</y>
+      <x>882</x>
+      <y>639</y>
       <w>108</w>
       <h>54</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-Maj R</panel_attributes>
+MAJ R</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;40.0;100.0;40.0;100.0;10.0</additional_attributes>
   </element>
 </diagram>
